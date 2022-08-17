@@ -27,6 +27,18 @@ public class HomeController : Controller
         return View();
     }
 
+    public string TestQueryString([FromQuery] string q, [FromQuery] string name) {
+        return $"Chegou aqui {q} para {name}";
+    }
+
+    public string TestForm([FromForm] string name, [FromForm] string email) {
+        return $"Nome: {name}, E-mail: {email}";
+    }
+
+    public IActionResult Form() {
+        return View();
+    }
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
