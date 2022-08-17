@@ -23,7 +23,7 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult SetimaAction() {
+    public IActionResult FirstAction() {
         return View();
     }
 
